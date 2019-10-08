@@ -7,7 +7,7 @@ git clone https://github.com/ton-blockchain/ton "$HOME/ton"
 cd "$HOME/ton"
 
 sudo apt-get -y update
-#sudo apt-get -y install clang
+sudo apt-get -y install make # ninja-build clang
 sudo snap install cmake --classic
 cmake . -DCMAKE_BUILD_TYPE=Release
 
