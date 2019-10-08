@@ -9,5 +9,8 @@ cd "$HOME/ton"
 sudo apt-get -y update
 sudo apt-get -y install make clang # ninja-build
 sudo snap install cmake --classic
+
+mkdir _build
+cd _build
 cmake . -DCMAKE_BUILD_TYPE=Release
 
