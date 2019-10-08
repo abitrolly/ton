@@ -20,12 +20,16 @@ make
 
 # install
 sudo make install
+
 export TONDB="$HOME/ton-db"
+export TONGC="$HOME/ton-global.config.json"
 export RUNTON="$HOME/run_ton.sh"
+
+curl -sSL https://test.ton.org/ton-global.config.json -o "$TONGC"
+
 cat <<HERE > "$RUNTON"
 #!/bin/bash
 
-validator-engine --db "$TONDB"
+validator-engine -C "$TONGC" --db "$TONDB"
 HERE
 chmod +x "$RUNTON"
-
