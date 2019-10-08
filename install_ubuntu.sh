@@ -16,3 +16,16 @@ mkdir _build
 cd _build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make
+
+
+# install
+sudo make install
+export TONDB="$HOME/ton-db"
+export RUNTON="$HOME/run_ton.sh"
+cat <<HERE > "$RUNTON"
+#!/bin/bash
+
+validator-engine --db "$TONDB"
+HERE
+chmod +x "$RUNTON"
+
