@@ -8,6 +8,7 @@ cd "$HOME/ton"
 
 sudo apt-get -y update
 sudo apt-get -y install make clang # ninja-build
+sudo apt-get -y install libssl-dev
 sudo snap install cmake --classic
 
 mkdir _build
