@@ -4,8 +4,8 @@
 #   curl -sSL https://bit.ly/ubunton | bash
 
 git clone https://github.com/ton-blockchain/ton "$HOME/ton"
-git submodule update --init
 cd "$HOME/ton"
+git submodule update --init
 
 sudo apt-get -y update
 sudo apt-get -y install make clang # ninja-build
